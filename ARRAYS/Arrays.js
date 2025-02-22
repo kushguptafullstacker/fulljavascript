@@ -46,4 +46,8 @@ console.log(mynew3);
 myarr=[10,18,19,10,"kush," , ["hrf", 18 , 10 ,1,[3907,28934,233248]]]
 console.log(myarr.flat(Infinity));// express all the value in one array 
 
+const Name=["kush , abhishek , 1 ,2 " , 1 ,2 , 3]
+const secondname=[1,2345,"re"]
 
+const fouth=[...Name ,  ...secondname]
+console.log(fouth);
