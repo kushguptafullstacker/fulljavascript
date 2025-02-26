@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        
+        <div class="parent">
+            <h2>fowicacc</h2>
+        <h1> kush gupta </h1>
+        <h1>efnWCKC</h1>
+            <h1 class="day">sunday</h1>
+            <h1>monday</h1>
+            <h1>tuesady</h1>
+            <h1>wednesday</h1>
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+    const piarent=document.querySelector('.parent')
+    // console.log(piarent);
+    console.log(piarent.children)
+    for(let i=0 ;i<piarent.children.length;i++){
+        console.log(piarent.children[i].innerText);
+    }
+   piarent.children[0].style.color='blue'
+   piarent.style.backgroundColor='black'
+   piarent.style.color='white'
+   
+   console.log(piarent.firstElementChild.innerHTML);
+   console.log(piarent.lastElementChild.innerText);
+   const myday=document.querySelector('.day')
+   console.log(myday);
+   console.log(myday.parentElement)
+
+   console.log(piarent.childNodes);
+  ////// child nodes gine all the value where we do break and where we enter it track all the item
+   
+</script>
