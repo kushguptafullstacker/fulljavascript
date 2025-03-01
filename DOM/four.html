@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #212121; color: white;">
+    <div>
+        <ul class="langname">
+            <li>javascript</li>
+        </ul>
+    </div>
+</body>
+<script>
+    ///// here is the how we add  , edit , remove in dom , briefly
+    let add = document.createElement('li')
+    add.innerHTML = ('chai')
+    document.querySelector('.langname')
+        .appendChild(add)
+
+    function lang(lngname) {
+        const add = document.createElement('li');
+        add.appendChild(document.createTextNode(`${lngname}`))
+
+
+        document.querySelector('.langname').appendChild(add)
+
+    }
+    lang('chai with me ')
+    lang('kush')
+
+    const say = document.querySelector("li:nth-child(2)")
+    const modify=document.createElement('li')
+     modify.textContent=('mojo')
+     say.replaceWith(modify)
+
+     const first=document.querySelector('li:nth-child(1)')
+     const fm=document.createElement('li')
+     fm.innerHTML=('typescript')
+     first.replaceWith(fm)
+     
+      const last=document.querySelector('li:last-child')
+      last.remove()
+</script>
+
+</html>
