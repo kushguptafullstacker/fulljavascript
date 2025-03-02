@@ -4,7 +4,7 @@
 
 //3 type of variable
 
-// let , vae , const
+// let , var, const
 
 let city ="sonipat";
 console.log(city);
