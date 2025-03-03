@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #212121; margin: auto; text-align: center;">
+    <button style="margin-bottom: 20px;" class="get">get data</button>
+    <div class="user"></div>
+</body>
+<script>
+    ////////////////here we are learn how xmlhttprequest send to get data
+
+
+
+    document.querySelector('.get').addEventListener('click', function () {
+        const result = 'https://api.github.com/users/kushguptafullstacker'
+        const xhr = new XMLHttpRequest;
+        xhr.open('GET', result)
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                const data = JSON.parse(this.responseText)
+                const name=document.createElement('h1')
+                name.innerHTML=data.login || data.name
+                
+                const avatarImg = document.createElement('img')
+                avatarImg.src = data.avatar_url;
+              const container=  document.querySelector('.user')
+              container.appendChild(avatarImg).style.height='100px';
+            container.appendChild(name).style.color='white'
+                
+            }
+        }
+        xhr.send()
+        
+        
+    })
+   
+</script>
+
+</html>
