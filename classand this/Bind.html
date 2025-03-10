@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button class="handler">start</button>  
+</body>
+<script>
+  
+
+///////////// here we how we use bind
+
+class react{
+  constructor(){
+         this.name="react"
+         this.server="httpls://liocalhost300"
+
+         document.querySelector('.handler').addEventListener('click' , this.handlery.bind(this))
+  }
+  
+  handlery(){
+    console.log("clicked");
+    console.log(this.server);
+   
+  }
+
+}
+ const app = new react
+
+</script>
+</html>
